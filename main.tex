@@ -1,0 +1,295 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% AJ - One Page Two Column Resume
+% LaTeX Template
+% Version 1.1 (14/08/2018)
+%
+% Original author:
+% Ajay Kumar Nelavagilu Udaya Kumar
+%
+% Original repository:
+% https://github.com/AjayKumar4/AJ-Resume
+%
+% IMPORTANT: THIS TEMPLATE NEEDS TO BE COMPILED WITH XeLaTeX
+%
+% This template uses several fonts not included with Windows/Linux by
+% default. If you get compilation errors saying a font is missing, find the line
+% on which the font is used and either change it to a font included with your
+% operating system or comment the line out to use the default font.
+% 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% 
+% TODO:
+% 1. Integrate biber/bibtex for article citation under publications.
+% 2. Figure out a smoother way for the document to flow onto the next page.
+% 3. Add styling information for a "Projects/Hacks" section.
+% 4. Add location/address information
+% 5. Merge OpenFont and MacFonts as a single sty with options.
+% 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+% CHANGELOG:
+% v1.1:
+% 1. Fixed several compilation bugs with \renewcommand
+% 2. Got Open-source fonts (Windows/Linux support)
+% 3. Added Last Updated
+% 4. Move Title styling into .sty
+% 5. Commented .sty file.
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+% Known Issues:
+% 1. Overflows onto second page if any column's contents are more than the
+% vertical limit
+% 2. Hacky space on the first bullet point on the second column.
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\documentclass[]{aj-resume-openfont}
+
+
+\begin{document}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+%     LAST UPDATED DATE
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\lastupdated
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+%     TITLE NAME
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\namesection{Ajay Kumar}{Nelavagilu Udaya Kumar} {\urlstyle{same} % \url{http://debarghyadas.com} \\
+\href{mailto:nelavala@tcd.ie}{nelavala@tcd.ie} | (+353) 892235142
+}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+%     COLUMN ONE
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{minipage}[t]{0.33\textwidth} 
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%     EDUCATION
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section{Education} 
+
+\subsection{Trinity College Dublin}
+\descript{M.Sc in Computer Science}
+\location{Expected Sep 2018 | Dublin, IE} %\\  Cum. GPA: N/A }
+\sectionsep
+
+\subsection{East Point College of \newline Engineering \& Technology}
+\descript{BE in Computer Science}
+\location{ Sep 2015 | Bengaluru, IND}
+%Conc. in Software Engineering \\
+%College of Engineering \\
+%Dean's List (All Semesters) \\
+%\location{ Cum. GPA: 3.92 / 4.0 \\
+%Major GPA: 3.94 / 4.0} 
+\sectionsep
+
+%\subsection{La Martiniere for Boys}
+%\location{Grad. May 2011|  Kolkata, India}
+%\sectionsep
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%     LINKS
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section{Links} 
+Github:// \href{https://github.com/AjayKumar4}{\custombold{AjayKumar4}} \\
+LinkedIn://  \href{https://www.linkedin.com/in/nuajaykumar}{\custombold{nuajaykumar}} \\
+%YouTube://  \href{https://www.youtube.com/user/DeedyDash007}{\custombold{DeedyDash007}} \\
+%Twitter://  \href{https://twitter.com/debarghya_das}{\custombold{@debarghya\_das}} \\
+%Quora://  \href{https://www.quora.com/Debarghya-Das}{\custombold{Debarghya-Das}}
+\sectionsep
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%     COURSEWORK
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section{Coursework}
+\subsection{Graduate}
+\textbullet{} Machine Learning\textbullet{} Data Analysis\\
+\textbullet{} Data Visualization\textbullet{} Scalable Computing\\
+\textbullet{} Advanced Software Engineering\\
+\textbullet{} Applied Statistical Modelling\\
+\textbullet{} Optimization Algorithms for Data Analysis\\
+\sectionsep
+
+\subsection{Coursera}
+Machine Learning \\
+{\footnotesize \textit{\textbf{(Stanford University \& Andrew Ng) }}} \\
+\sectionsep
+
+\subsection{Udemy}
+Machine Learning A-Z™ \\
+{\footnotesize \textit{\textbf{(Kirill Eremenko \& Hadelin de Ponteves) }}} \\
+\sectionsep
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%     SKILLS
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section{Skills}
+\subsection{Programming}
+\location{Over 3000 lines:}
+\textbullet{} Java \textbullet{} JavaScript \textbullet{} Python \\
+\textbullet{} SQL/T-SQL \textbullet{} node.js \\ 
+\location{Over 1000 lines:}
+\textbullet{} C\# \textbullet{} R \textbullet{} Matlab/Octave \\
+\textbullet{} Shell  \textbullet{} \LaTeX\ \\
+\location{Familiar:}
+\textbullet{} C \textbullet{} C++ \textbullet{} CSS3 \textbullet{} HTML5 \textbullet{} JIRA  \\
+\textbullet{} Dynamo DB \textbullet{} Android \textbullet{} MySQL \\
+\textbullet{} Microsoft SQL Server \textbullet{} Selenium \\
+\textbullet{} Postman \textbullet{} Agile Methodology \textbullet{} TDD \\
+\textbullet{} scikit-learn \textbullet{} scikit-garden \textbullet{} Jenkins\\ 
+\textbullet{} NumPy \textbullet{} Pandas \textbullet{} Tensor Flow \\
+\textbullet{} Spring Boot \textbullet{} Maven \textbullet{} Gradle \textbullet{} GIT \\
+\textbullet{} AWS Lambda \textbullet{} SVN \textbullet{} Power Bi \\
+\sectionsep
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+%     COLUMN TWO
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\end{minipage} 
+\hfill
+\begin{minipage}[t]{0.66\textwidth} 
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%     EXPERIENCE
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section{Experience}
+
+\runsubsection{SpiderLogic India Pvt Ltd}
+\descript{| Software Engineer }
+\location{ Sep 2015 – June 2017 | Bengaluru, IND}
+\vspace{\topsep} % Hacky fix for awkward extra vertical space
+\begin{tightemize}
+\item Worked on the XPO Last Mile team in primarily Selenium Java and T-SQL/SQL\\
+to plan, design and develop the full stack implementation of a new framework to \\
+test the web application.
+\item Created an API test framework for RESTful API using JavaScript in postman.
+\item Sprint Planning, Daily Scrum, Sprint Review \& Sprint Retrospective.
+\item All code was reviewed, perfected, and pushed to production.
+\end{tightemize}
+\sectionsep
+
+\runsubsection{PRATIAN Technologies (India) Private Limited}
+\descript{| Software Engineering Intern }
+\location{Aug 2014 – Sep 2015 | Bengaluru, IND}
+\begin{tightemize}
+\item Worked on the ACCESS HEALTH CARE LLC team in primarily HTML5, CSS3,\\
+JavaScript and Java to plan, design and develop the full stack implementation of \\
+a web application with Authentication, Create/Edit Blog, Discussion Form.
+\item Worked on the  Singapore Indian Development Association \& Arbinger team \\
+in primarily Selenium Java and T-SQL/SQL to plan, design and develop the full \\
+stack implementation of a new framework to test the web application.
+\item All code was reviewed, perfected, and pushed to production.
+\end{tightemize}
+\sectionsep
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%     RESEARCH
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%\section{Research}
+%\runsubsection{Cornell Robot Learning Lab}
+%\descript{| Head Undergrad Research}
+%\location{Jan 2014 – Present | Ithaca, NY}
+%Worked with \textbf{\href{http://www.cs.cornell.edu/~ashesh/}{Ashesh Jain}} and \textbf{\href{http://www.cs.cornell.edu/~asaxena/}{Prof %Ashutosh Saxena}} to create \textbf{PlanIt}, a tool which  learns from large scale user preference feedback to plan robot trajectories in %human environments.  Publication submitted.
+%\sectionsep
+
+%\runsubsection{Cornell Phonetics Lab}
+%\descript{| Head Undergraduate Researcher}
+%\location{Mar 2012 – May 2013 | Ithaca, NY}
+%Lead the development of \textbf{QuickTongue}, the first ever breakthrough tongue-controlled game with %\textbf{\href{http://conf.ling.cornell.edu/~tilsen/}{Prof Sam Tilsen}} to aid in Linguistics research. Publication submitted.
+%\sectionsep
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%     PROJECT
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section{Project}
+%\runsubsection{Mondrian Forests}
+%\descript{| Python}
+%\location{Jun 2018 – Present}
+%Understanding working of Mondrian process and Random forests. so that Mondrian Forests can be implemented in real-time environment.
+%Skills Used: \textbullet{} Python \textbullet{} Pandas \textbullet{} scikit-garden \textbullet{} scikit-learning 
+%\sectionsep
+
+\runsubsection{RETAIL STORE ANALYSIS \& VISUALIZATION}
+\descript{| Power Bi }
+\location{Jan 2018 – April 2018}
+Analysis \& Visualization Retail Store of USA using Power BI, answered the question\\
+like "total sales in a year by a district" \& "Comparing the total sales of the current year\\
+with the previous" and many more using visualization graph.\\
+Skills Used: \textbullet{} Power Bi \textbullet{} \LaTeX\
+\sectionsep
+
+\runsubsection{DYNAMIC SUSTAINABLE WAYFINDING}
+\descript{| Android App}
+\location{Jan 2018 – April 2018}
+Develop an Android application to suggest customer the best optimum pollution less\\
+roadmap for all mode of transportation in and around Dublin. We even configured and deployed sensor to read air pollution data.\\
+Skills Used: \textbullet{} Java \textbullet{} Maven \textbullet{} Android \textbullet{} JavaScript \textbullet{} Dynamo DB
+\textbullet{} node.js\\ \textbullet{} AWS Lambda \textbullet{} Jenkins \textbullet{} Spring Boot.
+\sectionsep
+
+\runsubsection{BIKE SHARE ANALYSIS}
+\descript{| Python}
+\location{Jan 2018 – JAN 2018}
+Performed a Wrangling an exploratory analysis of data provided by Motivate,\\
+a bike-share system provider for many major cities in the United States. Compared\\
+the system usage between three large cities: New York City, Chicago, and \\
+Washington DC to visualization and plot graphs to answer the question like \\
+"distribution of trip times for the Subscribers in your selected city" and many more.\\
+Skills Used: \textbullet{} Python \textbullet{} Pandas \textbullet{} Numpy 
+\sectionsep
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%     AWARDS
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%\section{Awards} 
+%\begin{tabular}{rll}
+%2014	     & top 52/2500  & KPCB Engineering Fellow\\
+%2014	     & 2\textsuperscript{nd} most points  & Google Code Jam, Qualification Round\\
+%2014	     & 1\textsuperscript{st}/50  & Microsoft Coding Competition, Cornell\\
+%2013	     & National  & Jump Trading Challenge Finalist\\
+%2013     & 7\textsuperscript{th}/120 & CS 3410 Cache Race Bot Tournament  \\
+%2012     & 2\textsuperscript{nd}/150 & CS 3110 Biannual Intra-Class Bot Tournament \\
+%2011     & National & Indian National Mathematics Olympiad (INMO) Finalist \\
+%2010     & National & Comp. Soc. of India's National Programming Contest\\
+%\end{tabular}
+%\sectionsep
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%     SOCIETIES
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%\section{Societies} 
+
+%\begin{tabular}{rll}
+%2014 	& top 12\%ile    & Tau Beta Pi Engineering Honor Society\\
+%2014   & National   & The Global Leadership and Education Forum (tGELF)\\
+%2012   &  National  & Golden Key International Honor Society\\
+%2012   &  National   & National Society of Collegiate Scholars\\
+%\end{tabular}
+%\sectionsep
+
+\end{minipage} 
+\end{document}  \documentclass[]{article}
