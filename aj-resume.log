@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.14159265-2.6-0.99999 (MiKTeX 2.9.6800 64-bit) (preloaded format=xelatex 2018.9.30)  4 OCT 2018 04:49
+This is XeTeX, Version 3.14159265-2.6-0.99999 (MiKTeX 2.9.6800 64-bit) (preloaded format=xelatex 2018.9.30)  4 OCT 2018 04:51
 entering extended mode
 **./aj-resume.tex
 (aj-resume.tex
@@ -951,25 +951,6 @@ isodate: babel.sty, (n)german.sty have not been loaded
 . - 'small caps'  (m/sc) with NFSS spec.:
 . <->"[fonts/raleway/Raleway-Medium]/OT:script=latn;language=DFLT;+smcp;"
 .................................................
-LaTeX Font Info:    Calculating math sizes for size <11> on input line 80.
-
-LaTeX Font Warning: Font shape `OML/cmm/m/it' in size <5.5> not available
-(Font)              size <5> substituted on input line 80.
-
-
-LaTeX Font Warning: Font shape `OMS/cmsy/m/n' in size <5.5> not available
-(Font)              size <5> substituted on input line 80.
-
-LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <11> on input line 80.
-LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <7.69997> on input line 80.
-LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <5.5> on input line 80.
-
-LaTeX Font Warning: Font shape `OT1/cmr/m/n' in size <5.5> not available
-(Font)              size <5> substituted on input line 80.
-
 
 LaTeX Font Warning: Font shape `TU/Lato-Lig(0)/m/sc' undefined
 (Font)              using `TU/Lato-Lig(0)/m/n' instead on input line 94.
@@ -1033,21 +1014,17 @@ Package rerunfilecheck Info: File `aj-resume.out' has not changed.
 (rerunfilecheck)             Checksum: 213E0E8532FFBF0D504B0309D9B17EAD.
 
 
-LaTeX Font Warning: Size substitutions with differences
-(Font)              up to 0.5pt have occurred.
-
-
 LaTeX Font Warning: Some font shapes were not available, defaults substituted.
 
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 290.
  ) 
 Here is how much of TeX's memory you used:
- 22071 strings out of 427798
- 401535 string characters out of 3151797
+ 22044 strings out of 427798
+ 400989 string characters out of 3151797
  507879 words of memory out of 3000000
- 25927 multiletter control sequences out of 15000+200000
- 534910 words of font info for 79 fonts, out of 3000000 for 9000
+ 25905 multiletter control sequences out of 15000+200000
+ 533066 words of font info for 71 fonts, out of 3000000 for 9000
  1328 hyphenation exceptions out of 8191
- 54i,12n,119p,448b,534s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 54i,12n,119p,448b,535s stack positions out of 5000i,500n,10000p,200000b,50000s
 
 Output written on aj-resume.pdf (1 page).
