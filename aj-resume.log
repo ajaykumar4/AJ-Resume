@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.14159265-2.6-0.99999 (MiKTeX 2.9.6800 64-bit) (preloaded format=xelatex 2018.9.30)  5 OCT 2018 19:38
+This is XeTeX, Version 3.14159265-2.6-0.99999 (MiKTeX 2.9.6800 64-bit) (preloaded format=xelatex 2018.9.30)  5 OCT 2018 23:46
 entering extended mode
 **./aj-resume.tex
 (aj-resume.tex
@@ -993,7 +993,7 @@ LaTeX Font Info:    External font `cmex10' loaded for size
 LaTeX Font Info:    External font `cmex10' loaded for size
 (Font)              <5> on input line 146.
 
-Overfull \hbox (2.29529pt too wide) in paragraph at lines 260--265
+Overfull \hbox (9.70029pt too wide) in paragraph at lines 260--265
 [][]  
  []
 
