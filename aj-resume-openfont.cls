@@ -93,10 +93,10 @@ Last Updated on \today
 %Symbols command
 \usepackage{fontawesome}
 \newcommand{\mobilephonesymbol}[1]   {{\Large\faMobilePhone}~}
-\newcommand{\emailsymbol}[1]         {{\small\faEnvelope}~}          % alternative: \faInbox
+\newcommand{\emailsymbol}[1]         {{\Large\faEnvelope}~}          % alternative: \faInbox
 \newcommand{\homepagesymbol}[1]      {{\Large\faHome}~}              % alternative: \faHome
 \newcommand{\linkedinsocialsymbol}[1]{{\Large\faLinkedin}~}           % alternative: \faLinkedinSquare
 \newcommand{\locationsymbol}[1]    {{\Large\faMapMarker}~}                 % alternative: \faTwitterSquare
 \newcommand{\githubsocialsymbol}[1]  {{\Large\faGithub}~}  
-\newcommand{\skypesocialsymbol}[1]   {{\Large\faSkype}~}
+\newcommand{\skypesocialsymbol}[1]   {{\Large\faSlack}~}
 
