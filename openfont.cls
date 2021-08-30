@@ -1,5 +1,5 @@
 % Intro Options
-\ProvidesClass{aj-resume-openfont}[2018/08/14 CV class]
+\ProvidesClass{openfont}[2018/08/14 CV class]
 \NeedsTeXFormat{LaTeX2e}
 \DeclareOption{print}{\def\@cv@print{}}
 \DeclareOption*{%
