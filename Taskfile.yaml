@@ -1,0 +1,70 @@
+---
+# yaml-language-server: $schema=https://taskfile.dev/schema.json
+version: "3"
+
+vars:
+  PYTHON_BIN: python3
+  REQUIREMENTS: "{{.ROOT_DIR}}/requirements.txt"
+  RESUME_YAML: "{{.ROOT_DIR}}/resume.yaml"
+  TEMPLATE_TEX: resume.tex
+  TEMPLATE_DARK_TEX: resume-dark.tex
+  OUTPUT: "{{.ROOT_DIR}}/resume"
+  MAKEJINJA_CONFIG_FILE: "{{.ROOT_DIR}}/makejinja.toml"
+
+env:
+  PYTHONDONTWRITEBYTECODE: "1"
+  VIRTUAL_ENV: "{{.ROOT_DIR}}/.venv"
+
+tasks:
+
+  venv:
+    desc: Set up virtual environment
+    cmds:
+      - "{{.PYTHON_BIN}} -m venv {{.VIRTUAL_ENV}}"
+      - '{{.VIRTUAL_ENV}}/bin/python3 -m pip install --upgrade pip setuptools wheel'
+    generates:
+      - "{{.VIRTUAL_ENV}}/pyvenv.cfg"
+
+  install:
+    desc: Install required Python packages
+    cmds:
+      - task: venv
+      - '{{.VIRTUAL_ENV}}/bin/python3 -m pip install --upgrade --requirement "{{.REQUIREMENTS}}"'
+    sources:
+      - "{{.REQUIREMENTS}}"
+    generates:
+      - "{{.VIRTUAL_ENV}}/pyvenv.cfg"
+    preconditions:
+      - { msg: "Missing Pip requirements file", sh: "test -f {{.REQUIREMENTS}}" }
+
+  clean:
+    desc: Clean up auxiliary LaTeX files
+    cmd: "rm -rf {{.OUTPUT}}"
+  
+  generate:
+    desc: Generate the LaTeX file from the template and JSON data
+    cmd: "{{.VIRTUAL_ENV}}/bin/makejinja"
+    preconditions:
+      - msg: Missing virtual environment
+        sh: test -d {{.VIRTUAL_ENV}}
+      - msg: Missing Makejinja config file
+        sh: test -f {{.MAKEJINJA_CONFIG_FILE}}
+      - msg: Missing Makejinja plugin file
+        sh: test -f {{.ROOT_DIR}}/scripts/plugin.py
+      - msg: Missing resume file
+        sh: test -f {{.RESUME_YAML}}
+  
+  compile:
+    desc: Compile the LaTeX file into a PDF
+    dir: "{{.OUTPUT}}"
+    cmds: 
+      - "xelatex -interaction=nonstopmode {{.TEMPLATE_TEX}}"
+      - "xelatex -interaction=nonstopmode {{.TEMPLATE_DARK_TEX}}"
+
+  resume:
+    desc: clean install generate compile 
+    cmds: 
+      - task: clean
+      - task: install
+      - task: generate
+      - task: compile

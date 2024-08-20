@@ -1,0 +1,142 @@
+basics:
+  name: Ajay Kumar
+  email: n.uajaykumar@gmail.com
+  mobile: +353 892235142
+  url: ajaykumar.ie
+  location: Galway, Ireland
+personal_statement: Accomplished Software Engineer with a over a decade of profesional experience
+  and proven track record of leading high-impact projects. Expert in optimizing performance,
+  enhancing quality, and delivering user-centric solutions for top-tier organizations.
+  Dedicated mentor, passionate open-source advocate, and active contributor to the developer community.
+links:
+  github:
+    name: ajayKumar4
+    icon: faGithub
+    url: github.com/ajayKumar4
+  linkedin:
+    name: nuajaykumar
+    icon: faLinkedin
+    url: linkedin.com/in/nuajaykumar
+educations:
+- institution: Trinity College Dublin
+  area: Data Science
+  studyType: Master’s
+  startDate: Aug 2017
+  endDate: Oct 2018
+  location: Dublin, Ireland
+  score: ''
+- institution: Visveswaraya Technological University
+  area: Computer Science and Engineering
+  studyType: Bachelor’s
+  startDate: Aug 2011
+  endDate: June 2015
+  location: Bengaluru, India
+  score: ''
+experiences:
+- name: Hertz
+  url: hertz.com
+  position: DevOps
+  startDate: Jan 2022
+  endDate: Present
+  location: Dublin, Ireland
+  highlights:
+  - Implemented \highlighttext{CI/CD} process using \highlighttext{Jenkins, Cloudbees} for global development team with \highlighttext{Helm Chart}, allowing for dozens of code updates per hour with zero downtime.
+  - \highlighttext{Automated infrastructure provisioning} process using \highlighttext{Terraform, Ansible} on \highlighttext{S3 bucket, Jfrog}.
+  - \highlighttext{Automated build and deployment} process with \highlighttext{Jenkins, Gradle, Maven, Node.js} and \highlighttext{Docker, Podman}, eliminating most of the manual work.
+  - Actively involved in Sprint Planning, Daily Scrum, Sprint Review \& Sprint Retrospective.
+  - \highlighttext{Requirement Analysis, Software Testing, Software Development, Software Debugging, DevOps,Continuous Integration, Continuous Learning, Accountability, Initiative, Multitasking, Approachability and Helpfulness}.
+- name: Siren
+  url: siren.io
+  position: DevOps
+  startDate: Apr 2019
+  endDate: Jan 2022
+  location: Galway, Ireland
+  highlights:
+  - Implemented \highlighttext{CI/CD} process using \highlighttext{Jenkins} in \highlighttext{GCP Kubernetes} for global development team, allowing for dozens of code updates per hour with zero downtime.
+  - \highlighttext{Automated build and deployment} process with \highlighttext{Jenkins, Gradle, Maven} and \highlighttext{Docker}, eliminating most of the manual work.
+  - \highlighttext{Automated Release} process with \highlighttext{Jenkins, JFrog} and \highlighttext{Jira}, eliminating most of the manual Release Process.
+  - Updated an API test framework for RESTful API using \highlighttext{Java, Groovy} in \highlighttext{Spock Framework} to utilise \highlighttext{Docker} and \highlighttext{Kubernetes} infrastructure.
+  - Designed and developed the full stack implementation of a Automation framework to utilise Docker infrastructure to test Web Application Using \highlighttext{Java, Testcontainers} and \highlighttext{Docker}.
+- name: TestReach
+  url: testreach.com
+  position: Software Engineer
+  startDate: Feb 2019
+  endDate: Mar 2019
+  location: Dublin, Ireland
+  highlights:
+  - Designed and developed the full stack implementation of a new Automation framework to test the web application using \highlighttext{ JavaScript} and \highlighttext{Nightwatch.js}.
+skills:
+- name: Technical Skills
+  keywords:
+  - name: Programming
+    keywords:
+    - Java/Groovy
+    - Node.js
+    - Javascript
+    - SQL/PL
+    - Shell Scripting
+    - GoLang
+  - name: Testing tools
+    keywords:
+    - Selenium 
+    - API Testing
+    - Postman
+  - name: Databases
+    keywords:
+    - MS SQL Server 
+    - Elasticsearch
+  - name: Automation/Build
+    keywords:
+    - Jenkins 
+    - Maven
+    - Gradle
+    - Jfrog
+    - Ansible
+    - Terraform
+  - name: Virtualization/Cloud
+    keywords:
+    - Docker 
+    - Podman 
+    - GCP
+    - AWS
+    - Kubernetes
+  - name: Tools
+    keywords:
+    - Kustomize
+    - Helm
+- name: Personal Skills
+  keywords:
+  - Self-motivation 
+  - Collaboration 
+  - Thorough
+  - Unselfishness
+  - Customer-Focused
+  - Adaptability 
+  - Problem Solving 
+  - Decision Making 
+  - Time management
+  - Flexibility
+  - Automation \& Testing
+  - Proactiveness
+projects:
+  - name: Zero-Tier Role
+    url: galaxy.ansible.com/ajaykumar4/zerotier
+    technology: Ansible
+    summary: Install and add new members to a zerotier network for x86\_64 and ARM-based computers.
+    skills:
+      - Ansible
+      - Zero-Tier
+  - name: Siren-Cluster-Monitorin
+    url: github.com/AjayKumar4/siren-cluster-monitoring
+    technology: Kustomize
+    summary: Deployment of ELK Stack using Kustomize to collect metrics data.
+    skills:
+      - Kustomize
+      - ELK Stack
+achievements: []
+# - Designed and developed the full stack implementation of a new Automation framework to test the web application using \highlighttext{ JavaScript} and \highlighttext{Nightwatch.js}.
+# - Designed and developed the full stack implementation of a new Automation framework to test the web application using \highlighttext{ JavaScript} and \highlighttext{Nightwatch.js}.
+# - Designed and developed the full stack implementation of a new Automation framework to test the web application using \highlighttext{ JavaScript} and \highlighttext{Nightwatch.js}.
+certificates:
+  - name: Introduction to Continuous Delivery and GitOps using Argo CD
+    url: https://www.credential.net/8b88c3fc-9afd-4848-8e1b-8080624c0163
