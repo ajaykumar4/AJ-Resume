@@ -1,5 +1,5 @@
 % Intro Options
-\ProvidesClass{openfont}[2018/08/14 CV class]
+\ProvidesClass{resume-dark}[2024/08/05 CV class]
 \NeedsTeXFormat{LaTeX2e}
 \DeclareOption{print}{\def\@cv@print{}}
 \DeclareOption*{%
@@ -7,22 +7,26 @@
 }
 \ProcessOptions\relax
 \LoadClass{article}
+
 % Package Imports
 \usepackage[hmargin=1.25cm, vmargin=0.75cm]{geometry}
 \usepackage[hidelinks]{hyperref}
-
-
+\usepackage{fancyhdr}
+\usepackage{fontawesome}
+\usepackage{parskip}
 
 % Publications
 \usepackage{cite}
-\renewcommand\refname{\vskip -1.5cm}
+
 
 % Color definitions
 \usepackage[usenames,dvipsnames]{xcolor} 
-\definecolor{date}{HTML}{666666} 
-\definecolor{primary}{HTML}{2b2b2b} 
-\definecolor{headings}{HTML}{6A6A6A}
-\definecolor{subheadings}{HTML}{333333}
+\definecolor{date}{HTML}{cecece} 
+\definecolor{primary}{HTML}{f0f0f0} 
+\definecolor{headings}{HTML}{fafafa}
+\definecolor{subheadings}{HTML}{FFC22F}
+\definecolor{background}{HTML}{252525}
+\pagecolor{background}
 
 % Set main fonts
 \usepackage{fontspec}
@@ -32,6 +36,7 @@
 % Date command
 \usepackage[absolute]{textpos}
 \usepackage[UKenglish]{isodate}
+\usepackage[UKenglish]{babel}
 \setlength{\TPHorizModule}{1mm}
 \setlength{\TPVertModule}{1mm}
 \newcommand{\lastupdated}{\begin{textblock}{60}(155,5)
@@ -53,6 +58,7 @@ Last Updated on \today
 \vspace{-15pt}
 }
 
+
 % Section seperators 
 \usepackage{titlesec}
 \titlespacing{\section}{0pt}{0pt}{0pt} 
@@ -68,7 +74,7 @@ Last Updated on \today
 \filright\color{subheadings}\fontspec[Path = fonts/lato/]{Lato-Bol}\fontsize{12pt}{12pt}\selectfont\bfseries\uppercase}{}{0em}{}
 
 \newcommand{\runsubsection}[1]{
-\color{subheadings}\fontspec[Path = fonts/lato/]{Lato-Bol}\fontsize{12pt}{12pt}\selectfont\bfseries\uppercase {#1} \normalfont}
+\filright\color{subheadings}\fontspec[Path = fonts/lato/]{Lato-Bol}\fontsize{12pt}{12pt}\selectfont\bfseries\uppercase {#1} \normalfont}
 
 % Descriptors command
 \newcommand{\descript}[1]{
@@ -76,12 +82,7 @@ Last Updated on \today
 
 % Location command
 \newcommand{\location}[1]{
-\color{headings}\raggedright\fontspec[Path = fonts/raleway/]{Raleway-Medium}\fontsize{10pt}{12pt}\selectfont {#1\\} \normalfont}
-
-% Bullet Lists with fewer gaps command
-\newenvironment{tightemize}{
-\vspace{-\topsep}\begin{itemize}\itemsep1pt \parskip0pt \parsep0pt}
-{\end{itemize}\vspace{-\topsep}}
+\filright\color{headings}\raggedright\fontspec[Path = fonts/raleway/]{Raleway-Medium}\fontsize{10pt}{12pt}\selectfont {#1\\} \normalfont}
 
 % Address command
 \newcommand{\address}[1]{\centering{#1\\}}
@@ -90,13 +91,7 @@ Last Updated on \today
 \newcommand{\highlighttext}[1]{
 \color{subheadings}\fontspec[Path = fonts/lato/]{Lato-Bol}\fontsize{10pt}{12pt}\selectfont\bfseries {#1} \normalfont}
 
-%Symbols command
-\usepackage{fontawesome}
-\newcommand{\mobilephonesymbol}[1]   {{\Large\faMobilePhone}~}
-\newcommand{\emailsymbol}[1]         {{\small\faEnvelope}~}          % alternative: \faInbox
-\newcommand{\homepagesymbol}[1]      {{\Large\faHome}~}              % alternative: \faHome
-\newcommand{\linkedinsocialsymbol}[1]{{\Large\faLinkedin}~}           % alternative: \faLinkedinSquare
-\newcommand{\locationsymbol}[1]    {{\Large\faMapMarker}~}                 % alternative: \faTwitterSquare
-\newcommand{\githubsocialsymbol}[1]  {{\Large\faGithub}~}  
-\newcommand{\skypesocialsymbol}[1]   {{\Large\faSkype}~}
-
+% Bullet Lists with fewer gaps command
+\newenvironment{tightemize}{
+\filright\vspace{-\topsep}\begin{itemize}\itemsep1pt \parskip0pt \parsep0pt}
+{\end{itemize}\vspace{-\topsep}}

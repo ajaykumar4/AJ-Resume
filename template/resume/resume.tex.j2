@@ -1,0 +1,186 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% One Page Two Column Resume
+% LaTeX Template
+%
+% Original author:
+% Ajay Kumar
+%
+% Original repository:
+% https://github.com/ajaykumar4/cv
+%
+% IMPORTANT: THIS TEMPLATE NEEDS TO BE COMPILED WITH XeLaTeX
+%
+% This template uses several fonts not included with Windows/Linux by
+% default. If you get compilation errors saying a font is missing, find the line
+% on which the font is used and either change it to a font included with your
+% operating system or comment the line out to use the default font.
+% 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\documentclass[]{resume}
+ 
+\pagestyle{fancy}
+\fancyhf{}
+ 
+\begin{document}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+%     LAST UPDATED DATE
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\lastupdated
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+%     TITLE NAME
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\namesection{#{ basics.name.split(' ')[0] }#}{#{ basics.name.split(' ')[1] }#}
+{ 
+\href{https://#{ basics.url }#}{\faLink\ #{ basics.url }#} |
+\href{mailto:#{ basics.email }#}{\faEnvelope\ #{ basics.email }#} | 
+\faMobile\ +353 892235142
+\linebreak
+\faMapMarker\ {#{ basics.location }#}
+}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+%     COLUMN ONE
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{minipage}[t]{0.33\textwidth} 
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%     EDUCATION
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+#% if educations %#
+\section{Education} 
+#% for education in educations[:2] %#
+\subsection{#{ education.institution }#}
+\descript{#{ education.studyType }# in #{ education.area }#}
+\location{#{ education.startDate }# - #{ education.endDate }# | #{ education.location }#}
+\sectionsep
+#% endfor %#
+#% endif %#
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%     LINKS
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+#% if links %#
+\section{Links} 
+#% for key, link in links.items() %#
+\highlighttext{\href{https://#{ link.url }#}{\#{ link.icon }# \ #{ link.name }#}}
+#% if not loop.last %#
+\newline
+#% endif %#
+#% endfor %#
+\sectionsep
+#% endif %#
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%     SKILLS
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+#% if skills %#
+\section{Skills}
+#% for skill in skills %#
+\subsection{#{ skill.name }#}
+#% for keyword in skill.keywords %#
+#% if keyword.name and keyword.keywords %#
+\location{\highlighttext{#{ keyword.name }#:}}
+#% for item in keyword.keywords %#
+\textbullet{}#{ item }#
+#% endfor %#
+#% else %#
+\textbullet{}#{ keyword }#
+#% endif %#
+#% endfor %#
+\sectionsep
+#% endfor %#
+#% endif %#
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%     CERTIFICATES
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+#% if certificates %#
+\section{Certificates}
+#% for certificate in certificates[:4] %#
+\textbullet{} \href{#{ certificate.url }#}{#{ certificate.name }#}
+#% endfor %#
+\sectionsep
+#% endif %#
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+%     COLUMN TWO
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\end{minipage} 
+\hfill
+\begin{minipage}[t]{0.66\textwidth} 
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%     EXPERIENCE
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+#% if experiences %#
+\section{Experience}
+#% for experience in experiences[:4] %#
+\runsubsection{\href{https:#{ experience.url }#}{#{ experience.name }#}}
+\descript{| #{ experience.position }# }
+\location{ #{ experience.startDate }# – #{ experience.endDate }# | #{ experience.location }#}
+\begin{tightemize}
+#% for highlight in experience.highlights %#
+\item #{ highlight }#
+#% endfor %#
+\end{tightemize}
+\sectionsep
+#% endfor %#
+#% endif %#
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%     PROJECT
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+#% if projects %#
+\section{Project}
+#% for project in projects[:2] %#
+\runsubsection{\href{https:#{ project.url }#}{#{ project.name }#}}
+\descript{| #{ project.technology }# }
+#{ project.summary }#
+#% if project.skills %#
+\newline
+Skills Used: \highlighttext{
+#% for skill in project.skills %#
+\textbullet{} #{ skill }#
+#% endfor %#
+}
+#% endif %#
+\sectionsep
+#% endfor %#
+#% endif %#
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%     ACHIEVEMENTS
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+#% if achievements %#
+\section{Achievements}
+#% for achievement in achievements[:2] %#
+\textbullet{} #{ achievement }#
+#% if not loop.last %#
+\newline
+#% endif %#
+#% endfor %#
+\sectionsep
+#% endif %#
+
+\end{minipage} 
+\end{document} 

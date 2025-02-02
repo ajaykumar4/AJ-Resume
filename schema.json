@@ -1,0 +1,282 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "type": "object",
+  "description": "Schema for a detailed resume",
+  "properties": {
+    "basics": {
+      "type": "object",
+      "description": "Basic personal information",
+      "properties": {
+        "name": {
+          "type": "string",
+          "description": "Full name of the individual",
+          "example": "Ajay Kumar"
+        },
+        "email": {
+          "type": "string",
+          "format": "email",
+          "description": "Email address",
+          "example": "n.uajaykumar@gmail.com"
+        },
+        "mobile": {
+          "type": "string",
+          "description": "Mobile phone number",
+          "example": "+353 892235142"
+        },
+        "url": {
+          "type": "string",
+          "description": "Personal website URL",
+          "example": "ajaykumar.ie"
+        },
+        "location": {
+          "type": "string",
+          "description": "Current location",
+          "example": "Galway, Ireland"
+        }
+      },
+      "required": ["name", "email", "mobile", "url", "location"]
+    },
+    "personal_statement": {
+      "type": "string",
+      "description": "A brief personal statement or summary",
+      "example": "Accomplished Software Engineer with over a decade of professional experience and a proven track record of leading high-impact projects. Expert in optimizing performance, enhancing quality, and delivering user-centric solutions for top-tier organizations. Dedicated mentor, passionate open-source advocate, and active contributor to the developer community."
+    },
+    "links": {
+      "type": "array",
+      "description": "Social or professional profile links",
+      "items": {
+        "type": "object",
+        "properties": {
+          "name": {
+            "type": "string",
+            "description": "Name of the profile",
+            "example": "ajayKumar4"
+          },
+          "icon": {
+            "type": "string",
+            "description": "Icon representing the profile",
+            "example": "faGithub"
+          },
+          "url": {
+            "type": "string",
+            "description": "URL of the profile",
+            "example": "github.com/ajayKumar4"
+          }
+        },
+        "required": ["name", "icon", "url"]
+      }
+    },
+    "educations": {
+      "type": "array",
+      "description": "Educational background",
+      "items": {
+        "type": "object",
+        "properties": {
+          "institution": {
+            "type": "string",
+            "description": "Name of the educational institution",
+            "example": "Trinity College Dublin"
+          },
+          "area": {
+            "type": "string",
+            "description": "Field of study",
+            "example": "Data Science"
+          },
+          "studyType": {
+            "type": "string",
+            "description": "Type of study (e.g., Bachelor's, Master's)",
+            "example": "Master’s"
+          },
+          "startDate": {
+            "type": "string",
+            "format": "date",
+            "description": "Start date of the education",
+            "example": "2017-08-01"
+          },
+          "endDate": {
+            "type": "string",
+            "format": "date",
+            "description": "End date of the education",
+            "example": "2018-10-01"
+          },
+          "location": {
+            "type": "string",
+            "description": "Location of the institution",
+            "example": "Dublin, Ireland"
+          },
+          "score": {
+            "type": "string",
+            "description": "Score or grade achieved",
+            "example": ""
+          }
+        },
+        "required": ["institution", "area", "studyType", "startDate", "endDate", "location"]
+      }
+    },
+    "experiences": {
+      "type": "array",
+      "description": "Professional experience",
+      "items": {
+        "type": "object",
+        "properties": {
+          "name": {
+            "type": "string",
+            "description": "Name of the company",
+            "example": "Hertz"
+          },
+          "url": {
+            "type": "string",
+            "description": "Company website URL",
+            "example": "hertz.com"
+          },
+          "position": {
+            "type": "string",
+            "description": "Job title or position",
+            "example": "DevOps"
+          },
+          "startDate": {
+            "type": "string",
+            "format": "date",
+            "description": "Start date of the position",
+            "example": "2022-01-01"
+          },
+          "endDate": {
+            "type": "string",
+            "format": "date",
+            "description": "End date of the position",
+            "example": "Present"
+          },
+          "location": {
+            "type": "string",
+            "description": "Location of the job",
+            "example": "Dublin, Ireland"
+          },
+          "highlights": {
+            "type": "array",
+            "description": "Key achievements or responsibilities",
+            "items": {
+              "type": "string",
+              "example": "Implemented CI/CD process using Jenkins, Cloudbees for global development team with Helm Chart, allowing for dozens of code updates per hour with zero downtime."
+            }
+          }
+        },
+        "required": ["name", "url", "position", "startDate", "endDate", "location", "highlights"]
+      }
+    },
+    "skills": {
+      "type": "array",
+      "description": "List of skills",
+      "items": {
+        "type": "object",
+        "properties": {
+          "name": {
+            "type": "string",
+            "description": "Category of skills",
+            "example": "Technical Skills"
+          },
+          "keywords": {
+            "type": "array",
+            "description": "Specific skills under the category",
+            "items": {
+              "type": "object",
+              "properties": {
+                "name": {
+                  "type": "string",
+                  "description": "Name of the skill category",
+                  "example": "Programming"
+                },
+                "keywords": {
+                  "type": "array",
+                  "description": "Detailed skills",
+                  "items": {
+                    "type": "string",
+                    "example": "Java/Groovy"
+                  }
+                }
+              },
+              "required": ["name", "keywords"]
+            }
+          }
+        },
+        "required": ["name", "keywords"]
+      }
+    },
+    "projects": {
+      "type": "array",
+      "description": "Personal or professional projects",
+      "items": {
+        "type": "object",
+        "properties": {
+          "name": {
+            "type": "string",
+            "description": "Name of the project",
+            "example": "Zero-Tier Role"
+          },
+          "url": {
+            "type": "string",
+            "description": "Project URL",
+            "example": "galaxy.ansible.com/ajaykumar4/zerotier"
+          },
+          "technology": {
+            "type": "string",
+            "description": "Technologies used in the project",
+            "example": "Ansible"
+          },
+          "summary": {
+            "type": "string",
+            "description": "Brief summary of the project",
+            "example": "Install and add new members to a zerotier network for x86_64 and ARM-based computers."
+          },
+          "skills": {
+            "type": "array",
+            "description": "Skills utilized in the project",
+            "items": {
+              "type": "string",
+              "example": "Ansible"
+            }
+          }
+        },
+        "required": ["name", "url", "technology", "summary", "skills"]
+      }
+    },
+    "achievements": {
+      "type": "array",
+      "description": "Key achievements",
+      "items": {
+        "type": "string",
+        "example": "Designed and developed the full stack implementation of a new Automation framework to test the web application using JavaScript and Nightwatch.js."
+      }
+    },
+    "certificates": {
+      "type": "array",
+      "description": "Certifications",
+      "items": {
+        "type": "object",
+        "properties": {
+          "name": {
+            "type": "string",
+            "description": "Name of the certificate",
+            "example": "Introduction to Continuous Delivery and GitOps using Argo CD"
+          },
+          "url": {
+            "type": "string",
+            "description": "URL to verify the certificate",
+            "example": "https://www.credential.net/8b88c3fc-9afd-4848-8e1b-8080624c0163"
+          }
+        },
+        "required": ["name", "url"]
+      }
+    }
+  },
+  "required": [
+    "basics",
+    "personal_statement",
+    "links",
+    "educations",
+    "experiences",
+    "skills",
+    "projects",
+    "achievements",
+    "certificates"
+  ]
+}
